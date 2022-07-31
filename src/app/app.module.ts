@@ -14,23 +14,26 @@ import { FindMyStuffComponent } from './find-my-stuff/find-my-stuff.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { HomeModule } from './home/home.module';
+import { FormsModule } from '@angular/forms';
+import { CardComponentComponent } from './card-component/card-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponentComponent,
-    HeroSectionComponent,
     TemplComponent,
     TableComponent,
-    FindMyStuffComponent
+    FindMyStuffComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
-
+    HomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

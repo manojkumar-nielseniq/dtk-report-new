@@ -1,0 +1,14 @@
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    height: 15em;
+    margin-left: 2em;
+    margin-right: 2em;
+    
+}
+.lead {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

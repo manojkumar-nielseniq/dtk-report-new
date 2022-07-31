@@ -8,6 +8,8 @@ import { HeroSectionComponent } from '../hero-section/hero-section.component';
 })
 export class HomeComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit(): void {

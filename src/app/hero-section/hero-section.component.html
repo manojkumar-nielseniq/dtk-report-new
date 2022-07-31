@@ -1,1 +1,65 @@
-<p>hero-section works!</p>
+<div class="container-fluid">
+  <div class="row mx-4 mt-4">
+    <div class="col my-auto">
+      <h2>Buyer Demographics by Product</h2>
+    </div>
+
+    <div class="col" id="actionBtn">
+      <div>
+        <i class="bi bi-download"></i>
+      </div>
+      <div class="breaker">|</div>
+      <!-- <div class="listContainer"> -->
+      <ul class="listIcons">
+        <li><span>Read Only</span></li>
+        <li><i class="bi bi-save"></i></li>
+        <li><i class="bi bi-three-dots-vertical"></i></li>
+      </ul>
+      <!-- </div> -->
+    </div>
+
+    <!-- Filteration goes here -->
+    <div class="filterContainer">
+      <p>
+        Analyze
+        <select [(ngModel)]="selectedIncome">
+          <option
+            *ngFor="let selectedIncome of income"
+            [ngValue]="selectedIncome"
+          >
+            {{ selectedIncome }}
+          </option>
+        </select>
+
+        by
+        <select [(ngModel)]="selectedPurchased">
+          <option
+            *ngFor="let selectedPurchased of purchasedItems"
+            [ngValue]="selectedPurchased"
+          >
+            {{ selectedPurchased }}
+          </option>
+        </select>
+        for
+        <select [(ngModel)]="selectedManufacturer">
+          <option
+            *ngFor="let selectedManufacturer of Manufacturers"
+            [ngValue]="selectedManufacturer"
+          >
+            {{ selectedManufacturer }}
+          </option>
+        </select>
+
+        purchased at Total Outlets in Total U.S.
+        <br />
+        between 07/11/2020, 03/28/2020 vs 11/02/2019, 07/20/2019
+      </p>
+      <div class="insightBtn">
+        <button class="btn btn-outline-secondary">Insights</button>
+      </div>
+    </div>
+  </div>
+
+
+  
+</div>
