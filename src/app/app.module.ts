@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { FormsModule } from '@angular/forms';
+import { StackChartComponent } from './stack-chart/stack-chart.component';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     TemplComponent,
     TableComponent,
     FindMyStuffComponent,
-    
+       
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,16 @@
 
-    <app-hero-section></app-hero-section>
+    <app-hero-section (ChangeIncome)="changeIncome($event)"></app-hero-section>
     
+    
+
     <!-- Cards goes here -->
-    <app-card-component></app-card-component>
+    <!-- <app-card-component></app-card-component> -->
 
-    <app-bar-chart></app-bar-chart>
+    <!-- <app-bar-chart></app-bar-chart> -->
 
+    <!-- <button class="btn btn-success" (click)="change()">Change Data</button> -->
+
+
+
+
+    <app-stack-chart [data]="Data"></app-stack-chart>

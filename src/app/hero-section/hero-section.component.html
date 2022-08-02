@@ -22,7 +22,7 @@
     <div class="filterContainer">
       <p>
         Analyze
-        <select [(ngModel)]="selectedIncome">
+        <select [(ngModel)]="selectedIncome" (ngModelChange)="onChange()">
           <option
             *ngFor="let selectedIncome of income"
             [ngValue]="selectedIncome"

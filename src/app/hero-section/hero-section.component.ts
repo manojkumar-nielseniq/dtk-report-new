@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,9 +7,13 @@ import { FormBuilder } from '@angular/forms';
 })
 export class HeroSectionComponent implements OnInit {
   
+  @Output('ChangeIncome')
+  changeIncome: EventEmitter<string> = new EventEmitter<string>();
   
   income:string[] = ["Household Income", "Industry Income", "Commercial Income"];
   selectedIncome:string = this.income[0];
+
+  // this.changeIncome.emit(this.selectedIncome);
 
   purchasedItems:string[] = ["Buying Households", "Buying Appliances"];
   selectedPurchased:string = this.purchasedItems[0];
@@ -24,6 +27,10 @@ export class HeroSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onChange() {
+    this.changeIncome.emit(this.selectedIncome);
   }
 
 }
