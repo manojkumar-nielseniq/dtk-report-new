@@ -1,12 +1,12 @@
 <div class="container-fluid">
 
-<div class="card" style="width: 18rem" *ngFor="let i of cards">
+<div class="card" style="width: 18rem">
   <div class="card-body">
     <h5 class="card-title">
       <span>
         <i class="bi bi-dot"></i>
       </span>
-      Highest Buying household Index
+      {{dataType}} {{buyingType || manufacturerName}} Index
     </h5>
     <p class="card-text">Unilever</p>
     <p>

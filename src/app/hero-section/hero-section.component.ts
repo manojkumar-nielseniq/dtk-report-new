@@ -10,6 +10,12 @@ export class HeroSectionComponent implements OnInit {
   @Output('ChangeIncome')
   changeIncome: EventEmitter<string> = new EventEmitter<string>();
   
+  @Output()
+  buyingType:EventEmitter<string> = new EventEmitter<string>();
+ 
+  @Output()
+  manufacturer:EventEmitter<string> = new EventEmitter<string>();
+  
   income:string[] = ["Household Income", "Industry Income", "Commercial Income"];
   selectedIncome:string = this.income[0];
 
@@ -18,7 +24,7 @@ export class HeroSectionComponent implements OnInit {
   purchasedItems:string[] = ["Buying Households", "Buying Appliances"];
   selectedPurchased:string = this.purchasedItems[0];
 
-  Manufacturers:string[] = ["4 PG Manufacturer", "2 PG Manufacturer"];
+  Manufacturers:string[] = ["4 PG manufacturer", "2 PG manufacturer"];
   selectedManufacturer:string = this.Manufacturers[0];
 
   
@@ -31,6 +37,8 @@ export class HeroSectionComponent implements OnInit {
 
   onChange() {
     this.changeIncome.emit(this.selectedIncome);
+    this.buyingType.emit(this.selectedPurchased);
+    this.manufacturer.emit(this.selectedManufacturer);
   }
 
 }

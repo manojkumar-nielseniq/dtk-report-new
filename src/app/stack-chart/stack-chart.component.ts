@@ -52,25 +52,12 @@ export class StackChartComponent implements OnInit {
     this.createStack(this.data);
     this.drawAxis();
   }
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-  //   //Add '${implements OnChanges}' to the class.
-  //   this.stack = d3.stack().keys(['Less30', 'Gt30Le60', 'Gt60le90', 'Gt90']);
-    
-  //   this.initScales();
-  //   this.initSvg();
-  //   this.createStack(changes['data'].currentValue);
-  //   this.drawAxis();
-  //   // console.log(changes)
-
-    
-  // }
-
+ 
+    // For changing the data on selection of income
   	ngOnChanges(changes: SimpleChanges) {
   		const dataChange = changes['data'];
   		if(dataChange.firstChange === false){
   			this.stack = d3.stack().keys(['Less30', 'Gt30Le60', 'Gt60le90', 'Gt90']);
-        // this.initScales();
         this.initSvg();
   			this.createStack(dataChange.currentValue);
         this.drawAxis();
@@ -85,6 +72,8 @@ export class StackChartComponent implements OnInit {
 
   private initSvg() {
 
+
+    // If block is used to remove the previous svg from DOM.
     if(this.svg !== undefined) {
       this.svg.remove();
     }

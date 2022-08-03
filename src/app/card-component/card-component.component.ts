@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card-component',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponentComponent implements OnInit {
 
-  cards: number[] = [1,2,3,4];
+  @Input() buyingType:string = "";
+  @Input() manufacturerName:string = "";
+  @Input() dataType:string = "";
 
   constructor() { }
 

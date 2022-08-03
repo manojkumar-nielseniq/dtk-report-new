@@ -22,7 +22,7 @@
     <div class="filterContainer">
       <p>
         Analyze
-        <select [(ngModel)]="selectedIncome" (ngModelChange)="onChange()">
+        <select [(ngModel)]="selectedIncome" (change)="onChange()">
           <option
             *ngFor="let selectedIncome of income"
             [ngValue]="selectedIncome"
@@ -32,7 +32,7 @@
         </select>
 
         by
-        <select [(ngModel)]="selectedPurchased">
+        <select [(ngModel)]="selectedPurchased" (change)="onChange()">
           <option
             *ngFor="let selectedPurchased of purchasedItems"
             [ngValue]="selectedPurchased"
@@ -41,7 +41,7 @@
           </option>
         </select>
         for
-        <select [(ngModel)]="selectedManufacturer">
+        <select [(ngModel)]="selectedManufacturer" (change)="onChange()">
           <option
             *ngFor="let selectedManufacturer of Manufacturers"
             [ngValue]="selectedManufacturer"

@@ -1,10 +1,14 @@
 
-    <app-hero-section (ChangeIncome)="changeIncome($event)"></app-hero-section>
+    <app-hero-section (ChangeIncome)="changeIncome($event)" (buyingType)="changeBuying($event)" (manufacturer)="changeManufacturer($event)" ></app-hero-section>
     
     
 
     <!-- Cards goes here -->
-    <!-- <app-card-component></app-card-component> -->
+    <div class="d-flex">
+
+        <app-card-component [buyingType]="selectedBuying" *ngFor="let item of cards" [dataType]="item"></app-card-component>
+        <app-card-component [manufacturerName]="selectedManufacturer" *ngFor="let item of cards" [dataType]="item"></app-card-component>
+    </div>
 
     <!-- <app-bar-chart></app-bar-chart> -->
 
