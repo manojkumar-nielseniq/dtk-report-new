@@ -1,24 +1,27 @@
-<div class="container-fluid">
+<div class="cardContainer">
 
-<div class="card" style="width: 18rem">
-  <div class="card-body">
+<div class="card mx-4 px-2 hidden ps-3">
+  <div class="card-body" style="position: relative;">
+    <span class="dot">
+      <i class="bi bi-dot"></i>
+    </span>
     <h5 class="card-title">
-      <span>
-        <i class="bi bi-dot"></i>
-      </span>
-      {{dataType}} {{buyingType || manufacturerName}} Index
+      {{dataType}} {{buyingType || manufacturerName}}
     </h5>
-    <p class="card-text">Unilever</p>
-    <p>
+    <p class="card-text my-1">Unilever</p>
+    <samp class="fs-5">
       170.0
-      <span>
+      <span class="fs-6">
         <i class="bi bi-arrow-down"></i>
       </span>
-      <span>-24.1 pt</span>
-    </p>
+      <samp class="lead text-danger">-24.10 pt</samp>
+    </samp>
     <p class="lead">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus
+      <strong>Unilever</strong> with the <strong>Income $10000+</strong>
     </p>
+    <p class="lead desc">
+      demographic indexes the {{dataType}} in the current period
+  </p>
   </div>
 </div>
 </div>

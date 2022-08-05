@@ -4,17 +4,22 @@
     
 
     <!-- Cards goes here -->
-    <div class="d-flex">
 
-        <app-card-component [buyingType]="selectedBuying" *ngFor="let item of cards" [dataType]="item"></app-card-component>
-        <app-card-component [manufacturerName]="selectedManufacturer" *ngFor="let item of cards" [dataType]="item"></app-card-component>
-    </div>
-
+        <div class="d-flex container justify-content-center">
+            
+            <app-card-component [buyingType]="selectedBuying" *ngFor="let item of cards" [dataType]="item"></app-card-component>
+            <app-card-component [manufacturerName]="selectedManufacturer" *ngFor="let item of cards" [dataType]="item"></app-card-component>
+        </div>
+        
     <!-- <app-bar-chart></app-bar-chart> -->
 
     <!-- <button class="btn btn-success" (click)="change()">Change Data</button> -->
 
+    <div class="container">
 
-
-
-    <app-stack-chart [data]="Data"></app-stack-chart>
+        <div class=" border border-2 p-3 pt-5 mt-4">
+            
+            <app-stack-chart class="" [data]="Data"></app-stack-chart>
+        </div>
+    </div>
+    <div class="p-2"></div>        

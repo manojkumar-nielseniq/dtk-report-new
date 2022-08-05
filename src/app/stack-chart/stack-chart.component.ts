@@ -179,6 +179,7 @@ export class StackChartComponent implements OnInit {
       .attr('width', this.x.bandwidth())
       .attr('height', (d: any, i: any) => {
         return this.y(d[0]) - this.y(d[1]);
-      });
+      })
+     
   }
 }

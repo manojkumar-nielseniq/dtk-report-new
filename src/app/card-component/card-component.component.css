@@ -1,14 +1,29 @@
-.container-fluid {
-    display: flex;
-    justify-content: space-between;
+.cardContainer {
+    max-width: 21em;
+    min-width: 10em;
 }
+
 .card {
-    height: 15em;
-    margin-left: 2em;
-    margin-right: 2em;
-    
-}
-.lead {
+    height: fit-content;
+    /* margin-left: 2em;
+    margin-right: 2em; */
     overflow: hidden;
     text-overflow: ellipsis;
+    
+}
+.dot {
+    position: absolute;
+    left: -5px;
+}
+.desc {
+    /* width: 18em; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.lead {
+    font-size: smaller;
+    margin-top: 0;
+    margin-bottom: 0;
+    
 }
