@@ -1,6 +1,6 @@
 
 <div style="width:400px; height:400px;">
-    <p style="font-weight: 800; color: darkgray">03/28/2020-07/11/2020</p>
+    <p style="font-weight: 500;">Employees from various States</p>
     <div *ngFor="let data of overviewValues" style="display: flex; justify-content: space-between; color:gray">
         <p><span [ngStyle]="{'background-color':data['color'], 'padding': '10px'}">&nbsp;</span> Employees from {{data["name"]}} = {{data["value"]}}</p>
         
