@@ -3,49 +3,6 @@ import { StackedChart } from '../StackedChart';
 
 import chartData from '../ChartData.json';
 
-const stackedChart2: StackedChart[] = [
-  {
-    Less30: 217,
-    Gt30Le60: 132,
-    Gt60le90: 60,
-    Gt90: 86,
-    date: '2010',
-    buyingType: 'Buying Households',
-    incomeType: 'Household Income',
-    manufacturers: '2 PG manufacturer',
-  },
-  {
-    Less30: 180,
-    Gt30Le60: 133,
-    Gt60le90: 85,
-    Gt90: 85,
-    date: '2011',
-    buyingType: 'Buying Households',
-    incomeType: 'Commercial Income',
-    manufacturers: '4 PG manufacturer',
-  },
-  {
-    Less30: 214,
-    Gt30Le60: 99,
-    Gt60le90: 61,
-    Gt90: 84,
-    date: '2012',
-    buyingType: 'Buying Appliances',
-    incomeType: 'Industry Income',
-    manufacturers: '4 PG manufacturer',
-  },
-  {
-    Less30: 196,
-    Gt30Le60: 143,
-    Gt60le90: 56,
-    Gt90: 96,
-    date: '2013',
-    buyingType: 'Buying Households',
-    incomeType: 'Household Income',
-    manufacturers: '4 PG manufacturer',
-  },
-];
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -57,6 +14,11 @@ export class HomeComponent {
   Data: StackedChart[] = [];
 
   cards:string[] = ["Highest", "Lowest"];
+  
+  // incomes: object = {"0": {company: "", maximum: 0}, "1": {company: "", minimum: 999999}};
+  incomes = [{company: "", income: 0}, {company: "", income: 999999}];
+  incomesMan = [{company: "", income: 0}, {company: "", income: 999999}];
+  
 
   selectedIncome: string = 'Household Income';
   selectedBuying: string = 'Buying Households';
@@ -88,9 +50,11 @@ export class HomeComponent {
   filterdData: StackedChart[] = [];
 
   changeChartData() {
-    // if(this.selectedIncome === "Industry Income") {
-    // console.log("INCOME: ", this.selectedIncome);
-    // console.log("Data: ", this.Data);
+
+    this.incomes = [{company: "", income: 0},{company: "",income: 999999}];
+    this.incomesMan = [{company: "", income: 0},{company: "",income: 999999}];
+
+    
     this.filterdData = this.stackedChart.filter(
       (d: any) => d.incomeType === this.selectedIncome
     );
@@ -98,11 +62,51 @@ export class HomeComponent {
       (d: any) => d.buyingType === this.selectedBuying
     );
 
+
+    //First two cards max & min income goes here
+    this.filterdData.map(data => {
+      if(data.income > this.incomes[0].income) {
+        this.incomes[0].income = data.income;
+        this.incomes[0].company = data.company;
+      }
+      if(data.income < this.incomes[1].income) {
+        this.incomes[1].income = data.income;
+        this.incomes[1].company = data.company;
+      }
+    });
+    // this.incomes.push(this.maximum, this.minimum);
+    console.log("*****INCOMES*****",this.incomes);
+    
+    
+
+
     this.filterdData = this.filterdData.filter(
       (d: any) => d.manufacturers === this.selectedManufacturer
     );
-    console.log(this.filterdData);
 
+    //Last two cards max & min income goes here
+    this.filterdData.map(data => {
+      if(data.income > this.incomesMan[0].income) {
+        this.incomesMan[0].income = data.income }
+        this.incomesMan[0].company = data.company;
+
+      if(data.income < this.incomesMan[1].income) {
+        this.incomesMan[1].income = data.income;
+        this.incomesMan[1].company = data.company;
+
+      }
+    });
+
+    // this.incomesMan.push(this.maximumMan, this.minimumMan);
+
+    // console.log("MAXIMUM VALUES: ", this.maximum);
+    // console.log("Minimum VALUES: ", this.minimum);
+    // console.log("MAXIMUMman VALUES: ", this.maximumMan);
+    // console.log("Minimumman VALUES: ", this.minimumMan);
+
+    // console.log("FILTERed: ", this.filterdData);
+    
+    
     this.Data = this.filterdData;
     // } else {
     //   this.Data = this.stackedChart;

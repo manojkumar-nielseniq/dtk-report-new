@@ -1,134 +1,93 @@
 [
     {
-      "Less30": 2175,
-      "Gt30Le60": 1329,
-      "Gt60le90": 605,
-      "Gt90": 866,
+      "company": "Wipro",
+      "less100": 1343,
+      "huntwohun": 4534,
+      "twohunthreehun": 4534,
+      "income": 123456,
       "date": "2009",
       "buyingType": "Buying Households",
       "incomeType":"Household Income",
       "manufacturers": "4 PG manufacturer"
     },
     {
-      "Less30": 1804,
-      "Gt30Le60": 1332,
-      "Gt60le90": 859,
-      "Gt90": 855,
+      "company": "TCS",
+      "less100": 3543,
+      "huntwohun": 1424,
+      "twohunthreehun": 6321,
+      "income": 1244,
+      "date": "2009",
+      "buyingType": "Buying Appliances",
+      "incomeType":"Household Income",
+      "manufacturers": "4 PG manufacturer"
+    },
+    {
+      "company": "Wipro",
+      "less100": 1343,
+      "huntwohun": 4534,
+      "twohunthreehun": 4534,
+      "income": 127908,
+      "date": "2009",
+      "buyingType": "Buying Households",
+      "incomeType":"Household Income",
+      "manufacturers": "2 PG manufacturer"
+    },
+    {
+      "company": "TCS",
+      "less100": 1343,
+      "huntwohun": 4534,
+      "twohunthreehun": 4534,
+      "income": 332,
+      "date": "2009",
+      "buyingType": "Buying Households",
+      "incomeType":"Household Income",
+      "manufacturers": "2 PG manufacturer"
+    },
+    {
+      "company": "TCS",
+      "less100": 3543,
+      "huntwohun": 1424,
+      "twohunthreehun": 6321,
+      "income": 1235,
+      "date": "2009",
+      "buyingType": "Buying Households",
+      "incomeType":"Household Income",
+      "manufacturers": "4 PG manufacturer"
+    },
+    {
+      "company": "Wipro",
+      "less100": 1234,
+      "huntwohun": 4321,
+      "twohunthreehun": 9887,
+      "income": 21442,
+      "date": "2009",
+      "buyingType": "Buying Appliances",
+      "incomeType":"Household Income",
+      "manufacturers": "4 PG manufacturer"
+    },
+    {
+      "company": "Unilever",
+      "less100": 7979,
+      "huntwohun": 1234,
+      "twohunthreehun": 5645,
+      "income": 908975,
       "date": "2011",
       "buyingType": "Buying Households",
       "incomeType":"Industry Income",
       "manufacturers": "2 PG manufacturer"
     },
     {
-      "Less30": 2148,
-      "Gt30Le60": 993,
-      "Gt60le90": 614,
-      "Gt90": 848,
+     "company": "Unilever",
+     "less100": 3543,
+     "huntwohun": 2566,
+     "twohunthreehun": 7532,
+     "income": 241322,
       "date": "2012",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Commercial Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 2148,
-      "Gt30Le60": 993,
-      "Gt60le90": 614,
-      "Gt90": 848,
-      "date": "2012",
-      "buyingType": "Buying Households",
-      "incomeType":"Household Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 2148,
-      "Gt30Le60": 993,
-      "Gt60le90": 614,
-      "Gt90": 848,
-      "date": "2002",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Industry Income",
-      "manufacturers": "2 PG manufacturer"
-    },
-    {
-      "Less30": 2018,
-      "Gt30Le60": 687,
-      "Gt60le90": 344,
-      "Gt90": 748,
-      "date": "2011",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Commercial Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 2175,
-      "Gt30Le60": 1329,
-      "Gt60le90": 605,
-      "Gt90": 866,
-      "date": "2010",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Household Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 1290,
-      "Gt30Le60": 1229,
-      "Gt60le90": 365,
-      "Gt90": 866,
-      "date": "2004",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Household Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 1804,
-      "Gt30Le60": 1332,
-      "Gt60le90": 859,
-      "Gt90": 855,
-      "date": "2018",
-      "buyingType": "Buying Households",
-      "incomeType":"Industry Income",
-      "manufacturers": "2 PG manufacturer"
-    },
-    {
-      "Less30": 2148,
-      "Gt30Le60": 993,
-      "Gt60le90": 614,
-      "Gt90": 848,
-      "date": "2012",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Commercial Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 2148,
-      "Gt30Le60": 993,
-      "Gt60le90": 614,
-      "Gt90": 848,
-      "date": "2012",
-      "buyingType": "Buying Households",
-      "incomeType":"Household Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 2148,
-      "Gt30Le60": 993,
-      "Gt60le90": 614,
-      "Gt90": 848,
-      "date": "2012",
-      "buyingType": "Buying Appliances",
-      "incomeType":"Industry Income",
-      "manufacturers": "4 PG manufacturer"
-    },
-    {
-      "Less30": 2018,
-      "Gt30Le60": 687,
-      "Gt60le90": 344,
-      "Gt90": 748,
-      "date": "2011",
       "buyingType": "Buying Appliances",
       "incomeType":"Commercial Income",
       "manufacturers": "4 PG manufacturer"
     }
+    
 ]
 
   

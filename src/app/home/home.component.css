@@ -3,3 +3,8 @@
     margin-left: 2em;
 
 }
+
+.chart-div{
+    display: flex;
+    justify-content: space-around;
+}
