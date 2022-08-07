@@ -2,7 +2,13 @@
 <div style="width:400px; height:400px;">
     <p style="font-weight: 800; color: darkgray">03/28/2020-07/11/2020</p>
     <div *ngFor="let data of overviewValues" style="display: flex; justify-content: space-between; color:gray">
-        <p><span [ngStyle]="{'background-color':data['color'], 'padding': '10px'}">&nbsp;</span> Employees from MH = {{data["value"]}}</p>
-        <p>{{((data["value"] / total)*100).toFixed(1)}}%</p>
+        <p><span [ngStyle]="{'background-color':data['color'], 'padding': '10px'}">&nbsp;</span> Employees from {{data["name"]}} = {{data["value"]}}</p>
+        
+        <p *ngIf="!isNan(((data['value'] / total)*100).toFixed(1)); else elseBlock">{{((data["value"] / total)*100).toFixed(1)}}%</p>
+
+        <ng-template #elseBlock>
+            <p>0%</p>
+        </ng-template>
+        
     </div>
 </div>

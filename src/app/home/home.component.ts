@@ -75,7 +75,7 @@ export class HomeComponent {
       }
     });
     // this.incomes.push(this.maximum, this.minimum);
-    console.log("*****INCOMES*****",this.incomes);
+    // console.log("*****INCOMES*****",this.incomes);
     
     
 

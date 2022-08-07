@@ -9,10 +9,15 @@
       {{dataType}} {{buyingType || manufacturerName}}
     </h5>
     <p class="card-text my-1">{{companyName}}</p>
-    <samp class="fs-5">
-      {{incomeNum}}
+    <samp class="fs-5" *ngIf="incomeNum !== 999999; else zeroValueBlock">
       
+      $ {{incomeNum}}M
     </samp>
+    <ng-template #zeroValueBlock>
+      <samp class="fs-5">
+        $ 0 M
+      </samp>
+    </ng-template>
     <p class="lead">
       <strong>{{companyName}}</strong> with the <strong>Income $10000+</strong>
     </p>

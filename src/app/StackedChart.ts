@@ -1,7 +1,7 @@
 export interface StackedChart {
-  less100: number;
-  huntwohun: number;
-  twohunthreehun: number;
+  MH: number;
+  DL: number;
+  RJ: number;
   income: number;
   company:string;
   date: string;

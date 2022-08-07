@@ -19,7 +19,7 @@ export class CardComponentComponent implements OnInit {
 
   ngOnInit(): void {
     // this.incomeNum = this.incomeData.income;
-    console.log(this.incomeData);
+    // console.log(this.incomeData);
     
     
   }
@@ -27,7 +27,7 @@ export class CardComponentComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
-    console.log("CHANGES: ", changes);
+    // console.log("CHANGES: ", changes);
     this.incomeNum = changes?.['incomeData']?.currentValue.income;
     this.companyName = changes?.['incomeData']?.currentValue.company;
     // this.comapanyName = changes?.['incomeData']?.
