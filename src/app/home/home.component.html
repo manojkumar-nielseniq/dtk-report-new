@@ -1,6 +1,7 @@
 
-    <app-hero-section (ChangeIncome)="changeIncome($event)" (buyingType)="changeBuying($event)" (manufacturer)="changeManufacturer($event)" ></app-hero-section>
-    
+    <app-hero-section (ChangeIncome)="changeIncome($event)" ></app-hero-section>
+    <!-- <app-hero-section (ChangeIncome)="changeIncome($event)" (buyingType)="changeBuying($event)" (manufacturer)="changeManufacturer($event)" ></app-hero-section> -->
+
     
 
     <!-- Cards goes here -->
@@ -17,9 +18,9 @@
 
     <div class="container">
 
-        <div class=" border border-2 p-3 pt-5 mt-4">
-            
-            <app-stack-chart class="" [data]="Data"></app-stack-chart>
+        <div class="border border-2 p-3 pt-5 mt-4 chart-div">
+            <app-chart-overview [dataOverview]="Data"></app-chart-overview>
+            <app-stack-chart [data]="Data"></app-stack-chart>
         </div>
     </div>
     <div class="p-2"></div>        

@@ -17,6 +17,8 @@ import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { FormsModule } from '@angular/forms';
 import { StackChartComponent } from './stack-chart/stack-chart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ChartOverviewComponent } from './chart-overview/chart-overview.component';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { StackChartComponent } from './stack-chart/stack-chart.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HomeModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

@@ -16,4 +16,6 @@ export class CardComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }
