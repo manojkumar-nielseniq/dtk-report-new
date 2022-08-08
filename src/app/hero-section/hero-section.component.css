@@ -41,6 +41,7 @@
     width: 100%;
     /* background: yellow; */
     margin-top: 1em;
+    margin-bottom: 20px;
     
 }
 .insightBtn {
@@ -48,4 +49,22 @@
 }
 .btn {
     border-radius: 20px;
+}
+
+.header-div{
+    display: flex;
+}
+@media(max-width: 800px){
+    .header-div{
+        flex-direction: column;
+        margin-bottom: 10px; 
+    }
+    .header{
+        text-align: center;
+        margin-bottom: 20px !important;
+    }
+    .insightBtn {
+        margin: 0;
+        margin-right: auto;
+    }
 }

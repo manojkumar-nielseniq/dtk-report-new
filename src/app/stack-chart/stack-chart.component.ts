@@ -6,6 +6,7 @@ import {
   SimpleChanges,
   SimpleChange,
   OnInit,
+  HostListener,
 } from '@angular/core';
 import * as d3 from 'd3';
 import { StackedChart } from '../StackedChart';
@@ -18,6 +19,24 @@ import { StackedChart } from '../StackedChart';
 })
 export class StackChartComponent implements OnInit {
   @Input() data: StackedChart[] = [];
+
+  private getScreenWidth: any;
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    if(this.getScreenWidth < 500){
+      this.w = 400
+    } else if(this.getScreenWidth < 800) {
+      this.w = 500
+    } else {
+      this.w = 600
+    }
+    this.stack = d3.stack().keys(['mh', 'dl', 'rj']);
+    this.initScales();
+    this.initSvg();
+    this.createStack(this.data);
+    this.drawAxis();
+  }
 
   private w: number = 600;
   private h: number = 400;
@@ -45,12 +64,7 @@ export class StackChartComponent implements OnInit {
   constructor(private container: ElementRef) {}
 
   ngOnInit() {
-    this.stack = d3.stack().keys(['mh', 'dl', 'rj']);
-
-    this.initScales();
-    this.initSvg();
-    this.createStack(this.data);
-    this.drawAxis();
+    this.onWindowResize()
   }
  
     // For changing the data on selection of income

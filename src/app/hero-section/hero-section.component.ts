@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -15,6 +15,12 @@ export class HeroSectionComponent implements OnInit {
  
   @Output('manufacturer')
   manufacturer:EventEmitter<string> = new EventEmitter<string>();
+
+  public getScreenWidth:any;
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+  }
   
   income:string[] = ["Household Income", "Industry Income", "Commercial Income"];
   selectedIncome:string = this.income[0];
@@ -33,6 +39,7 @@ export class HeroSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.onWindowResize()
   }
 
   onChange() {

@@ -1,10 +1,14 @@
 <div class="container">
   <div class="row mt-4">
-    <div class="col my-auto">
+    <div class="header-div">
+    <div class="col my-auto header">
       <h2>Buyer Demographics by Product</h2>
     </div>
 
-    <div class="col" id="actionBtn">
+    <div class="col" id="actionBtn"> <!--*ngIf="getScreenWidth > 800">-->
+      <div class="insightBtn"  *ngIf="getScreenWidth < 800">
+        <button class="btn btn-outline-secondary">Insights</button>
+      </div>
       <div>
         <i class="bi bi-download"></i>
       </div>
@@ -17,7 +21,7 @@
       </ul>
       <!-- </div> -->
     </div>
-
+  </div>
     <!-- Filteration goes here -->
     <div class="filterContainer">
       <p>
@@ -52,7 +56,7 @@
 
         purchased at Total Outlets in Total U.S. between 07/11/2020, 03/28/2020 vs 11/02/2019, 07/20/2019
       </p>
-      <div class="insightBtn">
+      <div class="insightBtn"  *ngIf="getScreenWidth > 800">
         <button class="btn btn-outline-secondary">Insights</button>
       </div>
     </div>
