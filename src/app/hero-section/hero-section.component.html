@@ -24,29 +24,29 @@
         Analyze
         <select [(ngModel)]="selectedIncome" (change)="onChange()">
           <option
-            *ngFor="let selectedIncome of income"
-            [ngValue]="selectedIncome"
+            *ngFor="let item of income"
+            [ngValue]="item"
           >
-            {{ selectedIncome }}
+            {{ item }}
           </option>
         </select>
 
         by
         <select [(ngModel)]="selectedPurchased" (change)="onChange()">
           <option
-            *ngFor="let selectedPurchased of purchasedItems"
-            [ngValue]="selectedPurchased"
+            *ngFor="let item of purchasedItems"
+            [ngValue]="item"
           >
-            {{ selectedPurchased }}
+            {{ item }}
           </option>
         </select>
         for
         <select [(ngModel)]="selectedManufacturer" (change)="onChange()">
           <option
-            *ngFor="let selectedManufacturer of Manufacturers"
-            [ngValue]="selectedManufacturer"
+            *ngFor="let item of Manufacturers"
+            [ngValue]="item"
           >
-            {{ selectedManufacturer }}
+            {{ item }}
           </option>
         </select>
 

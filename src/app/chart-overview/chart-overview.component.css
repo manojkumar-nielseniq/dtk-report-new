@@ -1,0 +1,9 @@
+.chart-container {
+    width: 400px; 
+    height: 400px
+}
+.data-container {
+    display: flex; 
+    justify-content: space-between; 
+    color: gray
+}

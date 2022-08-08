@@ -18,11 +18,9 @@ export class CardComponentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.incomeNum = this.incomeData.income;
-    // console.log(this.incomeData);
-    
     
   }
+  MAX_NUM = Number.MAX_VALUE;
 
   ngOnChanges(changes: SimpleChanges): void {
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.

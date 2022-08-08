@@ -12,13 +12,20 @@ export class HomeComponent {
   stackedChart: StackedChart[] = chartData;
 
   Data: StackedChart[] = [];
+  filterdData: StackedChart[] = [];
 
-  cards:string[] = ["Highest", "Lowest"];
-  
+
+  cards: string[] = ['Highest', 'Lowest'];
+
   // incomes: object = {"0": {company: "", maximum: 0}, "1": {company: "", minimum: 999999}};
-  incomes = [{company: "", income: 0}, {company: "", income: 999999}];
-  incomesMan = [{company: "", income: 0}, {company: "", income: 999999}];
-  
+  incomes = [
+    { company: '', income: 0 },
+    { company: '', income: Number.MAX_VALUE },
+  ];
+  incomesMan = [
+    { company: '', income: 0 },
+    { company: '', income: Number.MAX_VALUE },
+  ];
 
   selectedIncome: string = 'Household Income';
   selectedBuying: string = 'Buying Households';
@@ -45,16 +52,20 @@ export class HomeComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.changeChartData();
+    
   }
 
-  filterdData: StackedChart[] = [];
 
   changeChartData() {
+    this.incomes = [
+      { company: '', income: 0 }, //For Maximum income
+      { company: '', income: Number.MAX_VALUE }, //For minimum income
+    ];
+    this.incomesMan = [
+      { company: '', income: 0 },
+      { company: '', income: Number.MAX_VALUE },
+    ];
 
-    this.incomes = [{company: "", income: 0},{company: "",income: 999999}];
-    this.incomesMan = [{company: "", income: 0},{company: "",income: 999999}];
-
-    
     this.filterdData = this.stackedChart.filter(
       (d: any) => d.incomeType === this.selectedIncome
     );
@@ -63,21 +74,21 @@ export class HomeComponent {
     );
 
 
+
     //First two cards max & min income goes here
-    this.filterdData.map(data => {
-      if(data.income > this.incomes[0].income) {
+    this.filterdData.map((data) => {
+      if (data.income > this.incomes[0].income) {
         this.incomes[0].income = data.income;
         this.incomes[0].company = data.company;
       }
-      if(data.income < this.incomes[1].income) {
+      if (data.income < this.incomes[1].income) {
         this.incomes[1].income = data.income;
         this.incomes[1].company = data.company;
       }
     });
     // this.incomes.push(this.maximum, this.minimum);
     // console.log("*****INCOMES*****",this.incomes);
-    
-    
+
 
 
     this.filterdData = this.filterdData.filter(
@@ -85,15 +96,15 @@ export class HomeComponent {
     );
 
     //Last two cards max & min income goes here
-    this.filterdData.map(data => {
-      if(data.income > this.incomesMan[0].income) {
-        this.incomesMan[0].income = data.income }
+    this.filterdData.map((data) => {
+      if (data.income > this.incomesMan[0].income) {
+        this.incomesMan[0].income = data.income;
         this.incomesMan[0].company = data.company;
+      }
 
-      if(data.income < this.incomesMan[1].income) {
+      if (data.income < this.incomesMan[1].income) {
         this.incomesMan[1].income = data.income;
         this.incomesMan[1].company = data.company;
-
       }
     });
 
@@ -105,8 +116,7 @@ export class HomeComponent {
     // console.log("Minimumman VALUES: ", this.minimumMan);
 
     // console.log("FILTERed: ", this.filterdData);
-    
-    
+
     this.Data = this.filterdData;
     // } else {
     //   this.Data = this.stackedChart;

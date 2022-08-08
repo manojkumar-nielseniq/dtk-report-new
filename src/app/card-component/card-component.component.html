@@ -9,13 +9,13 @@
       {{dataType}} {{buyingType || manufacturerName}}
     </h5>
     <p class="card-text my-1">{{companyName}}</p>
-    <samp class="fs-5" *ngIf="incomeNum !== 999999; else zeroValueBlock">
+    <samp class="fs-5" *ngIf="incomeNum !== MAX_NUM; else zeroValueBlock">
       
       $ {{incomeNum}}M
     </samp>
     <ng-template #zeroValueBlock>
       <samp class="fs-5">
-        $ 0 M
+        $ 0M
       </samp>
     </ng-template>
     <p class="lead">
