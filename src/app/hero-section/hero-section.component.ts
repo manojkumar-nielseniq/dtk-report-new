@@ -8,8 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
 export class HeroSectionComponent implements OnInit {
   
   @Output('ChangeIncome')
-  changeIncome: EventEmitter<{incomeType: string, buyingType: string, manufacturers: string}> = new EventEmitter<{incomeType: string, buyingType: string, manufacturers: string}>();
+  changeIncome: EventEmitter<string> = new EventEmitter<string>();
   
+  @Output('buyingType')
+  buyingType:EventEmitter<string> = new EventEmitter<string>();
+ 
+  @Output('manufacturer')
+  manufacturer:EventEmitter<string> = new EventEmitter<string>();
   
   income:string[] = ["Household Income", "Industry Income", "Commercial Income"];
   selectedIncome:string = this.income[0];
@@ -28,11 +33,12 @@ export class HeroSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.onChange()
   }
 
   onChange() {
-    this.changeIncome.emit({incomeType: this.selectedIncome, buyingType: this.selectedPurchased, manufacturers: this.selectedManufacturer});
+    this.changeIncome.emit(this.selectedIncome);
+    this.buyingType.emit(this.selectedPurchased);
+    this.manufacturer.emit(this.selectedManufacturer);
   }
 
 }

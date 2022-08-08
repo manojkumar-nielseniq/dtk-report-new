@@ -45,7 +45,7 @@ export class StackChartComponent implements OnInit {
   constructor(private container: ElementRef) {}
 
   ngOnInit() {
-    this.stack = d3.stack().keys(['less30', 'gt30Le60', 'gt60le90', 'gt90']);
+    this.stack = d3.stack().keys(['mh', 'dl', 'rj']);
 
     this.initScales();
     this.initSvg();
@@ -57,8 +57,7 @@ export class StackChartComponent implements OnInit {
   	ngOnChanges(changes: SimpleChanges) {
   		const dataChange = changes['data'];
   		if(dataChange.firstChange === false){
-        
-  			this.stack = d3.stack().keys(['less30', 'gt30Le60', 'gt60le90', 'gt90']);
+  			this.stack = d3.stack().keys(['mh', 'dl', 'rj']);
         this.initSvg();
   			this.createStack(dataChange.currentValue);
         this.drawAxis();

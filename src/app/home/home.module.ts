@@ -13,9 +13,9 @@ import { HomeComponent } from "./home.component";
         HomeComponent,
         HeroSectionComponent,
         CardComponentComponent,
-        ChartOverviewComponent,
         BarChartComponent,
-        StackChartComponent
+        StackChartComponent,
+        ChartOverviewComponent
     ],
     imports: [
         BrowserModule,
