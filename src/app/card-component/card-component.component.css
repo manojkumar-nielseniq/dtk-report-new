@@ -1,22 +1,22 @@
-.cardContainer {
-    max-width: 21em;
-    min-width: 10em;
-    margin-bottom: 30px;
-}
+
 
 .card {
-    height: fit-content;
+    height: min-content;
     /* margin-left: 2em;
     margin-right: 2em; */
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 !important;
-    width: 275px;
+    /* margin: 0 !important; */
+    width: 19rem;
+    /* margin-bottom: 10px; */
+
     
 }
 .dot {
     position: absolute;
-    left: -5px;
+    font-size: larger;
+    left: 0;
+    /* top: 3px; */
 }
 .desc {
     /* width: 18em; */

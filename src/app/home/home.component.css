@@ -9,3 +9,14 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.tab {
+    width: 12em;
+    border-color: rgb(19, 236, 63) !important;
+    position: relative;
+    bottom: -2px;
+    
+}
+.optionBtn {
+    cursor: pointer;
+}

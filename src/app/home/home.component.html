@@ -1,24 +1,41 @@
+<app-hero-section
+  (ChangeIncome)="changeIncome($event)"
+  (buyingType)="changeBuying($event)"
+  (manufacturer)="changeManufacturer($event)"
+></app-hero-section>
 
-    <app-hero-section (ChangeIncome)="changeIncome($event)" (buyingType)="changeBuying($event)" (manufacturer)="changeManufacturer($event)" ></app-hero-section>
-    
-    
+<!-- Cards goes here -->
 
-    <!-- Cards goes here -->
+<div class="container chart-div p-0">
+  <app-card-component
+    [buyingType]="selectedBuying"
+    *ngFor="let item of cards; let i = index"
+    [dataType]="item"
+    [incomeData]="incomes[i]"
+  ></app-card-component>
+  <app-card-component
+    [manufacturerName]="selectedManufacturer"
+    *ngFor="let item of cards; let i = index"
+    [dataType]="item"
+    [incomeData]="incomesMan[i]"
+  ></app-card-component>
+</div>
 
-        <div class="container chart-div">
-            
-            <app-card-component [buyingType]="selectedBuying" *ngFor="let item of cards; let i=index" [dataType]="item" [incomeData]="incomes[i]"></app-card-component>
-            <app-card-component [manufacturerName]="selectedManufacturer" *ngFor="let item of cards; let i=index" [dataType]="item" [incomeData]="incomesMan[i]"></app-card-component>
-        </div>
-        
-    <!-- <app-bar-chart></app-bar-chart> -->
+<!-- <app-bar-chart></app-bar-chart> -->
 
+<div class="container">
+  <div class="border border-2">
 
-    <div class="container">
-
-        <div class="border border-2 p-3 pt-5 mt-4 chart-div ">
-            <app-chart-overview [dataOverview]="Data"></app-chart-overview>
-            <app-stack-chart [data]="Data"></app-stack-chart>
-        </div>
+    <div class="border-2 border-bottom d-flex">
+      <h6 class="tab border-3 border-bottom my-auto ps-3 py-2">Employee Distribution</h6>
+      <div class="align-self-center ms-auto px-2 optionBtn">
+        <i class="bi bi-three-dots"></i>
+      </div>
     </div>
-    <div class="p-2"></div>        
+    <div class="p-3 chart-div">
+      <app-chart-overview [dataOverview]="Data"></app-chart-overview>
+      <app-stack-chart [data]="Data"></app-stack-chart>
+    </div>
+  </div>
+</div>
+<div class="p-2"></div>

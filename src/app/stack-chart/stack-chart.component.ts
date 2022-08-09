@@ -59,6 +59,9 @@ export class StackChartComponent implements OnInit {
   private tooltip: any;
   private stackedSeries: any;
 
+  private xTitle = "Companies";
+  private yTitle = "Employee Count";
+
   private colors = ['#00D7D2', '#313c53', '#7BD500'];
 
   constructor(private container: ElementRef) {}
@@ -127,7 +130,7 @@ export class StackChartComponent implements OnInit {
       .classed('axis-title', true)
       .style('text-anchor', 'middle')
       .style('stroke', 'none')
-      // .text(this.xTitle);
+      .text(this.xTitle);
 
     this.yAxis = this.chart
       .append('g')
@@ -142,7 +145,7 @@ export class StackChartComponent implements OnInit {
       .style('text-anchor', 'middle')
       .style('stroke', 'none')
       .classed('axis-title', true)
-      // .text(this.yTitle);
+      .text(this.yTitle);
   }
 
   private createStack(stackData: any) {
