@@ -22,7 +22,7 @@ export class HeroSectionComponent implements OnInit {
     this.getScreenWidth = window.innerWidth;
   }
   
-  income:string[] = ["Household Income", "Industry Income", "Commercial Income"];
+  income:string[] = ["Household Income", "Industry Income"];
   selectedIncome:string = this.income[0];
 
   // this.changeIncome.emit(this.selectedIncome);
