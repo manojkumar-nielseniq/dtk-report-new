@@ -6,18 +6,13 @@
 
 <!-- Cards goes here -->
 
-<<<<<<< HEAD
 <div class="container chart-div p-0">
-=======
-<div class="d-flex container justify-content-center">
->>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3
   <app-card-component
     [buyingType]="selectedBuying"
     *ngFor="let item of cards; let i = index"
     [dataType]="item"
     [incomeData]="incomes[i]"
   ></app-card-component>
-<<<<<<< HEAD
   <app-card-component
     [manufacturerName]="selectedManufacturer"
     *ngFor="let item of cards; let i = index"
@@ -44,25 +39,3 @@
   </div>
 </div>
 <div class="p-2"></div>
-=======
-
-  <app-card-component
-    [manufacturerName]="selectedManufacturer"
-    *ngFor="let item of cards; let i = index"
-    [dataType]="item"
-    [incomeData]="incomesMan[i]"
-  ></app-card-component>
-</div>
-
-<!-- <app-bar-chart></app-bar-chart> -->
-
-<!-- Chart goes here -->
-<div class="container">
-  <div class="border border-2 p-3 pt-5 mt-4 chart-div">
-    <app-chart-overview [dataOverview]="Data"></app-chart-overview>
-    <app-stack-chart [data]="Data"></app-stack-chart>
-  </div>
-</div>
-
-<div class="p-3"></div>
->>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3

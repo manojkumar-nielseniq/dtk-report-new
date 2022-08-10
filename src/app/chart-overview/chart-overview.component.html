@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <div class="overview-div">
     <p style="font-weight: 500;">Employees from various States</p>
@@ -13,28 +12,3 @@
         
     </div>
 </div>
-=======
-<div class="chart-container">
-  <p class="fw-semibold">Employees from various States</p>
-  <div
-    *ngFor="let data of overviewValues"
-    class="data-container"
-  >
-    <p>
-      <span [ngStyle]="{ 'background-color': data['color']}" class="p-2">&nbsp;</span
-      >
-      Employees from {{ data["name"] }} = {{ data["value"] }}
-    </p>
-
-    <p
-      *ngIf="!isNan(((data['value'] / total) * 100).toFixed(1)); else elseBlock"
-    >
-      {{ ((data["value"] / total) * 100).toFixed(1) }}%
-    </p>
-
-    <ng-template #elseBlock>
-      <p>0%</p>
-    </ng-template>
-  </div>
-</div>
->>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3
