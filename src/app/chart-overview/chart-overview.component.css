@@ -1,7 +1,4 @@
-.overview-div{
-    width:400px;
-    height:200px;
-}
+
 @media(max-width: 477px){
     .overview-div{
         width: 350px;

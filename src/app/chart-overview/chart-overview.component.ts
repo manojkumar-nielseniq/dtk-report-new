@@ -23,15 +23,15 @@ export class ChartOverviewComponent implements OnInit {
   constructor() { }
   overviewValues: {"value": number, "color": string, "name": string}[] = [{
     "value": 0,
-    "color": '#00D7D2',
+    "color": '#00A346',
     "name": ""
   },{
     "value": 0,
-    "color": '#313c53',
+    "color": '#10009D',
     "name": "",
   },{
     "value": 0,
-    "color": '#7BD500',
+    "color": '#FF6D05',
     "name": ""
   }]//['#00D7D2', '#313c53', '#7BD500'];
   ngOnInit(): void {
@@ -43,16 +43,16 @@ export class ChartOverviewComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges) {
     this.overviewValues = [{
       "value": 0,
-      "color": '#00D7D2',
-      "name": ""
-    },{
-      "value": 0,
-      "color": '#313c53',
-      "name": "",
-    },{
-      "value": 0,
-      "color": '#7BD500',
-      "name": ""
+    "color": '#00A346',
+    "name": ""
+  },{
+    "value": 0,
+    "color": '#10009D',
+    "name": "",
+  },{
+    "value": 0,
+    "color": '#FF6D05',
+    "name": ""
     }];
 
     //console.log("DATA OVERVIEW: ", changes['dataOverview']);

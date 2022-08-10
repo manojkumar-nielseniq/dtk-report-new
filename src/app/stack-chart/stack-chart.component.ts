@@ -25,7 +25,7 @@ export class StackChartComponent implements OnInit {
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
     if(this.getScreenWidth < 500){
-      this.w = 400
+      this.w = 350
     } else if(this.getScreenWidth < 800) {
       this.w = 500
     } else {
@@ -62,7 +62,7 @@ export class StackChartComponent implements OnInit {
   private xTitle = "Companies";
   private yTitle = "Employee Count";
 
-  private colors = ['#00D7D2', '#313c53', '#7BD500'];
+  private colors = ['#00A346', '#10009D', '#FF6D05'];
 
   constructor(private container: ElementRef) {}
 

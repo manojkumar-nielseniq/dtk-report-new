@@ -1,5 +1,5 @@
 
-<div class="overview-div">
+<div class="d-flex flex-column h-100 justify-content-center w-auto">
     <p style="font-weight: 500;">Employees from various States</p>
     <div *ngFor="let data of overviewValues" style="display: flex; justify-content: space-between; color:gray">
         <p><span [ngStyle]="{'background-color':data['color'], 'padding': '10px'}">&nbsp;</span> Employees from {{data["name"].toUpperCase()}} = {{data["value"]}}</p>
