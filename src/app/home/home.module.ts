@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BarChartComponent } from "../bar-chart/bar-chart.component";
 import { CardComponentComponent } from "../card-component/card-component.component";
 import { ChartOverviewComponent } from "../chart-overview/chart-overview.component";
@@ -19,7 +20,8 @@ import { HomeComponent } from "./home.component";
     ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [

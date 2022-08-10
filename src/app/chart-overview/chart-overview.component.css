@@ -4,4 +4,11 @@
         width: 350px;
         height: 300px;
     }
+    
+}
+@media(max-width: 1000px) {
+    .chart-overview-container {
+        width: 100% !important;
+        
+    }
 }

@@ -1,14 +1,25 @@
+<div class="d-flex flex-column h-100 justify-content-center w-50 mx-auto chart-overview-container">
+  <p style="font-weight: 500">Emp from various States</p>
+  <div
+    *ngFor="let data of overviewValues"
+    style="color: gray;"
+    class="d-flex justify-content-between"
+  >
+    <p>
+      <span [ngStyle]="{ 'background-color': data['color'], padding: '10px' }"
+        >&nbsp;</span
+      >
+      Employees from {{ data["name"].toUpperCase() }} = {{ data["value"] }}
+    </p>
 
-<div class="d-flex flex-column h-100 justify-content-center w-auto">
-    <p style="font-weight: 500;">Employees from various States</p>
-    <div *ngFor="let data of overviewValues" style="display: flex; justify-content: space-between; color:gray">
-        <p><span [ngStyle]="{'background-color':data['color'], 'padding': '10px'}">&nbsp;</span> Employees from {{data["name"].toUpperCase()}} = {{data["value"]}}</p>
-        
-        <p *ngIf="!isNan(((data['value'] / total)*100).toFixed(1)); else elseBlock">{{((data["value"] / total)*100).toFixed(1)}}%</p>
+    <p
+      *ngIf="!isNan(((data['value'] / total) * 100).toFixed(1)); else elseBlock"
+    >
+      {{ ((data["value"] / total) * 100).toFixed(1) }}%
+    </p>
 
-        <ng-template #elseBlock>
-            <p>0%</p>
-        </ng-template>
-        
-    </div>
+    <ng-template #elseBlock>
+      <p>0%</p>
+    </ng-template>
+  </div>
 </div>

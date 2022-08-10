@@ -68,3 +68,11 @@
         margin-right: auto;
     }
 }
+
+
+select {
+    border: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    font-weight: 500;
+}

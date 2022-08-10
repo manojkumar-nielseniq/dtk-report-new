@@ -3,12 +3,30 @@ import { StackedChart } from '../StackedChart';
 
 import chartData from '../ChartData.json';
 import { DataServiceService } from '../data-service/data-service.service';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  animations:[
+
+    trigger('fade',[
+
+      transition('void=> *',[
+
+        style({backgroundColor:'white',opacity:0}),
+
+        animate(1000,style({backgroundColor:'white',opacity:1}))
+
+      ])
+
+    ])
+
+  ]
+
 })
+
 export class HomeComponent {
   constructor(private dataService: DataServiceService) {}
   //stackedChart: StackedChart[] = [];

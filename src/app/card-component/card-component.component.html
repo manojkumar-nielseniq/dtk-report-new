@@ -1,29 +1,26 @@
-<div >
-
-<div class="card hidden ps-1 mb-3">
-  <div class="card-body p-2" style="position: relative;">
-    <span class="dot ">
-      <i class="bi bi-dot"></i>
-    </span>
-    <h5 class="card-title ms-3 my-auto">
-      {{dataType}} {{buyingType || manufacturerName}}
-    </h5>
-    <p class="card-text mt-1 mb-0">{{companyName}}</p>
-    <samp class="fs-5" *ngIf="incomeNum !== 999999; else zeroValueBlock">
-      
-      $ {{incomeNum}}M
-    </samp>
-    <ng-template #zeroValueBlock>
-      <samp class="fs-5">
-        $ 0M
+<div>
+  <div class="card hidden ps-1 mb-3">
+    <div class="card-body p-2" style="position: relative">
+      <span class="dot">
+        <i class="bi bi-dot"></i>
+      </span>
+      <h5 class="card-title ms-3 my-auto">
+        {{ dataType }} {{ buyingType || manufacturerName }}
+      </h5>
+      <p class="card-text mt-1 mb-0">{{ companyName }}</p>
+      <samp class="fs-5" *ngIf="incomeNum !== 999999; else zeroValueBlock">
+        $ {{ incomeNum }}M
       </samp>
-    </ng-template>
-    <p class="lead">
-      <strong>{{companyName}}</strong> with the <strong>Income $10000+</strong>
-    </p>
-    <p class="lead desc"> 
-      demographic indexes the {{dataType}} in the current period
-  </p>
+      <ng-template #zeroValueBlock>
+        <samp class="fs-5"> $ 0M </samp>
+      </ng-template>
+      <p class="lead">
+        <strong>{{ companyName }}</strong> with the
+        <strong>Income $10000+</strong>
+      </p>
+      <p class="lead desc">
+        demographic indexes the {{ dataType }} in the current period
+      </p>
+    </div>
   </div>
-</div>
 </div>

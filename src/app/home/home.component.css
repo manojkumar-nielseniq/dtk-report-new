@@ -20,3 +20,9 @@
 .optionBtn {
     cursor: pointer;
 }
+
+@media(max-width: 477px) {
+    .chart-o-container {
+        width: 100% !important;
+    }
+}

@@ -4,20 +4,35 @@ import { HeroSectionComponent } from './hero-section.component';
 
 describe('HeroSectionComponent', () => {
   let component: HeroSectionComponent;
+
   let fixture: ComponentFixture<HeroSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroSectionComponent ]
+      declarations: [HeroSectionComponent],
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(HeroSectionComponent);
+
     component = fixture.componentInstance;
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have appropriate dropdown values', () => {
+    expect(component.income).toHaveSize(2);
+
+    expect(component.purchasedItems).toHaveSize(2);
+
+    expect(component.Manufacturers).toHaveSize(2);
+  });
+
+  it('should have `Buyer Demographics by Product` as header', () => {
+    expect(component.header).toEqual('Buyer Demographics by Product');
   });
 });
