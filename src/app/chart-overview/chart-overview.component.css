@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .overview-div{
     width:400px;
     height:200px;
@@ -8,3 +9,14 @@
         height: 300px;
     }
 }
+=======
+.chart-container {
+    width: 400px; 
+    height: 400px
+}
+.data-container {
+    display: flex; 
+    justify-content: space-between; 
+    color: gray
+}
+>>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3

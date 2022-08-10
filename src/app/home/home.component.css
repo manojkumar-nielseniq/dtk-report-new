@@ -7,6 +7,7 @@
 .chart-div{
     display: flex;
     justify-content: space-around;
+<<<<<<< HEAD
     flex-wrap: wrap;
 }
 
@@ -19,4 +20,6 @@
 }
 .optionBtn {
     cursor: pointer;
+=======
+>>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3
 }

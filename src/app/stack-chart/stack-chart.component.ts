@@ -67,14 +67,27 @@ export class StackChartComponent implements OnInit {
   constructor(private container: ElementRef) {}
 
   ngOnInit() {
+<<<<<<< HEAD
     this.onWindowResize()
+=======
+    this.stack = d3.stack().keys(['MH', 'DL', 'RJ']);
+
+    this.initScales();
+    this.initSvg();
+    this.createStack(this.data);
+    this.drawAxis();
+>>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3
   }
  
     // For changing the data on selection of income
   	ngOnChanges(changes: SimpleChanges) {
   		const dataChange = changes['data'];
   		if(dataChange.firstChange === false){
+<<<<<<< HEAD
   			this.stack = d3.stack().keys(['mh', 'dl', 'rj']);
+=======
+  			this.stack = d3.stack().keys(['MH', 'DL', 'RJ']);
+>>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3
         this.initSvg();
   			this.createStack(dataChange.currentValue);
         this.drawAxis();

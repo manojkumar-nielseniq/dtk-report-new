@@ -8,8 +8,13 @@
     <h5 class="card-title ms-3 my-auto">
       {{dataType}} {{buyingType || manufacturerName}}
     </h5>
+<<<<<<< HEAD
     <p class="card-text mt-1 mb-0">{{companyName}}</p>
     <samp class="fs-5" *ngIf="incomeNum !== 999999; else zeroValueBlock">
+=======
+    <p class="card-text my-1">{{companyName}}</p>
+    <samp class="fs-5" *ngIf="incomeNum !== MAX_NUM; else zeroValueBlock">
+>>>>>>> 4d8dd56fd230044da934b20a80fc9ec8462bd5e3
       
       $ {{incomeNum}}M
     </samp>
